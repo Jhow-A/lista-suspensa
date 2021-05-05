@@ -1,0 +1,35 @@
+﻿@model Estado
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tag helper Select</h1>
+</div>
+<div>
+    <h2>Select asp-for vazio</h2>
+    <select asp-for="EstadoSigla">
+    </select>
+
+    <h2>Select asp-for com opções</h2>
+    <select asp-for="EstadoSigla">
+        <option value="MG">Minas Gerais</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="PR">Paraná</option>
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="-">Outros Estados</option>
+    </select>
+
+    <h2>Select asp-for com opções de uma base de dados</h2>
+    <select asp-for="EstadoSigla" asp-items="ViewBag.Estados">
+        <option value="MG">Minas Gerais</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="PR">Paraná</option>
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="-">Outros Estados</option>
+    </select>
+</div>
+
